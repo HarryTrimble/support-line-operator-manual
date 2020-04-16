@@ -1,0 +1,37 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Safeguarding concern | BRC support line manual
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="/safeguard/immediate-risk" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <span class="govuk-caption-m">Yes - immediate risk</span>
+        <h1 class="govuk-heading-xl">
+          What you should do
+        </h1>
+
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            Call 999. Either you, the operator or the caller
+          </strong>
+        </div>
+
+        <form action="/safeguard/advice-needed" method="post" class="form">
+
+          <button class="govuk-button black-button" data-module="govuk-button">Next step after calling 999</button>
+
+        </form>
+
+    </div>
+  </div>
+{% endblock %}

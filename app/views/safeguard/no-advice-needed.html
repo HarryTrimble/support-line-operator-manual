@@ -1,0 +1,36 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Safeguarding concern | BRC support line manual
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <span class="govuk-caption-m">No - advice needed</span>
+        <h1 class="govuk-heading-xl">
+          What you should do
+        </h1>
+
+        <ol class="govuk-list govuk-list--number">
+          <li>No further safeguarding action required. </li>
+          <li><a href="/personal-information/forms">Record information from the call</a></li>
+        </ol>
+
+        <div class="govuk-warning-text">
+          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+          <strong class="govuk-warning-text__text">
+            <span class="govuk-warning-text__assistive">Warning</span>
+            Any allegation of abuse or harm against a British Red Cross representative must be reported to the <a href="/training/contact-safeguarding">Safeguarding Assurance Team</a> promptly.
+          </strong>
+        </div>
+
+    </div>
+  </div>
+{% endblock %}

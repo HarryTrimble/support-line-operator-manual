@@ -1,0 +1,47 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Safeguarding concern | BRC support line manual
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="/safeguard/signpost" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/safeguard/already-supported" method="post" class="form">
+
+        <h1 class="govuk-heading-l">
+          Do you need specialist safeguarding advice or support? 
+        </h1>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="advice_needed-yes" name="advice_needed" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="over-18-yes">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="advice_needed-no" name="advice_needed" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="over-18-no">
+                No
+              </label>
+            </div>
+          </div>
+          </fieldset>
+        </div>
+
+        <button class="govuk-button black-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

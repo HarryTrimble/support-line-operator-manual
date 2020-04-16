@@ -39,7 +39,7 @@ router.post('/refer/urgent', function (req, res) {
   }
 })
 
-// Branching in /urgent
+// Branching in /refer/urgent
 router.post('/refer/result/yes-urgent', function (req, res) {
 
   let urgent = req.session.data['urgent']
@@ -50,5 +50,43 @@ router.post('/refer/result/yes-urgent', function (req, res) {
     res.redirect('/refer/result/yes-urgent')
   }
 })
+
+// Branching in /safeguard/immediate-risk
+router.post('/safeguard/signpost', function (req, res) {
+
+  let immediate_risk = req.session.data['immediate_risk']
+
+  if (immediate_risk === 'yes') {
+    res.redirect('/safeguard/call-999')
+  } else {
+    res.redirect('/safeguard/signpost')
+  }
+})
+
+// Branching in /safeguard/immediate-risk
+router.post('/safeguard/already-supported', function (req, res) {
+
+  let advice_needed = req.session.data['advice_needed']
+
+  if (advice_needed === 'yes') {
+    res.redirect('/safeguard/yes-advice-needed')
+  } else {
+    res.redirect('/safeguard/already-supported')
+  }
+})
+
+// Branching in /safeguard/immediate-risk
+router.post('/safeguard/yes-advice-needed', function (req, res) {
+
+  let advice_needed = req.session.data['advice_needed']
+  let already_supported = req.session.data['already_supported']
+
+  if (advice_needed === 'no' && already_supported === 'no') {
+    res.redirect('/safeguard/no-advice-needed')
+  } else {
+    res.redirect('/safeguard/yes-advice-needed')
+  }
+})
+
 
 module.exports = router

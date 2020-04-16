@@ -1,0 +1,31 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Safeguarding concern | BRC support line manual
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="/safeguard/immediate-risk" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/safeguard/advice-needed" method="post" class="form">
+
+        <h1 class="govuk-heading-l">
+          Has the person been signposted to the relevant support or agency?
+        </h1>
+
+        <p class="govuk-body"> <a href="/signposting" target="_blank">Signpost to other services</a>: for example Samaritans or local council Community Hub
+        </p>
+
+        <button class="govuk-button black-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

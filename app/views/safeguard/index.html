@@ -1,0 +1,48 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Safeguarding concern | BRC support line manual
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/training">Training</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Safeguarding concern</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/safeguard/immediate-risk" method="post" class="form">
+
+        <h1 class="govuk-heading-xl">
+          Decide what to do about a safeguarding concern
+        </h1>
+
+        <p>
+          Use this tool to decide what to do if you have a safeguaridng concern about someone.  
+        </p>
+
+        <p>
+          It usually takes about 3 minutes. 
+        </p>
+
+        <button class="govuk-button black-button" data-module="govuk-button">Start now</button>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
