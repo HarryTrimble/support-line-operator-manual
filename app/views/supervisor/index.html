@@ -1,0 +1,45 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Supervisor | BRC support line manual
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Supervisor</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Supervisor</h1>
+
+      <ul class="govuk-list">
+        <li>
+          <a href="/supervisor/briefing-checklist">Briefing checklist</a>
+        </li>
+        <li>
+          <a href="/supervisor/updates">Updates to give operators</a>
+        </li>
+        <li>
+          <a href="/supervisor/de-briefing-checklist">De-briefing checklist</a>
+        </li>
+        <li>
+          <a href="/supervisor/forms">Record information from de-brief</a>
+        </li>
+      </ul>
+
+    </div>
+</div>
+
+{% endblock %}

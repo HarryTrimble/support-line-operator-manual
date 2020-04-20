@@ -1,0 +1,101 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Refer or not | BRC support line manual
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/supervisor">Supervisor</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Briefing checklist</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/refer/local-organisations" method="post" class="form">
+
+        <h1 class="govuk-heading-xl">Briefing checklist</h1>
+
+        <p class="govuk-body">Supervisor check with operators at shift briefing:</p>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="available" name="checklist" type="checkbox" value="available">
+                <label class="govuk-label govuk-checkboxes__label" for="available">
+                  Still available for their shift. If not call them
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="familar-with-manual" name="checklist" type="checkbox" value="familar-with-manual">
+                <label class="govuk-label govuk-checkboxes__label" for="familar-with-manual">
+                  Familiar with the <a href="/">Operator Manual</a>
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="page-updates" name="checklist" type="checkbox" value="page-updates">
+                <label class="govuk-label govuk-checkboxes__label" for="page-updates">
+                  Have checked the <a href="/page-updates">page updates</a> section of the manual 
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="log-in" name="checklist" type="checkbox" value="log-in">
+                <label class="govuk-label govuk-checkboxes__label" for="log-in">
+                  Able to <a href="/equipment/setup-phone">log in</a> (it is a free phone number)
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="missed-calls" name="checklist" type="checkbox" value="missed-calls">
+                <label class="govuk-label govuk-checkboxes__label" for="missed-calls">
+                  Know <a href="/equipment/how-to-answer">missed calls will log you off</a> and require you to <a href="/equipment/setup-phone"> log in again</a>
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="forms" name="checklist" type="checkbox" value="forms">
+                <label class="govuk-label govuk-checkboxes__label" for="forms">
+                  Comfortable <a href="/personal-information/forms">filling in the online from for each caller</a>
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="supervisor" name="checklist" type="checkbox" value="supervisor">
+                <label class="govuk-label govuk-checkboxes__label" for="supervisor">
+                  Know <a href="/support-for-operators/speak-to-supervisor">contact the supervisor</a> while on shift
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="supervisor" name="checklist" type="checkbox" value="supervisor">
+                <label class="govuk-label govuk-checkboxes__label" for="supervisor">
+                  Clear on <a href="/refer">when to refer to a local ER team</a>
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="supervisor" name="checklist" type="checkbox" value="supervisor">
+                <label class="govuk-label govuk-checkboxes__label" for="supervisor">
+                  <a href="/supervisor/updates">Give operators updates</a>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <a onClick="window.location.reload();" class="govuk-button govuk-button--secondary">Start again</a>
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

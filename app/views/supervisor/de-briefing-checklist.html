@@ -1,0 +1,96 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  De-briefing checklist | BRC support line manual
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/supervisor">Supervisor</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">De-briefing checklist</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form action="/refer/local-organisations" method="post" class="form">
+
+        <h1 class="govuk-heading-xl">De-briefing checklist</h1>
+
+        <p class="govuk-body">Cover in de-briefing at end of shift:</p>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="individuals-issues" name="checklist" type="checkbox" value="individuals-issues">
+                <label class="govuk-label govuk-checkboxes__label" for="individuals-issues">
+                  Individuals to follow up with
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="technical-issues" name="checklist" type="checkbox" value="technical-issues">
+                <label class="govuk-label govuk-checkboxes__label" for="technical-issues">
+                  Technical issues to follow up with
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="call-types" name="checklist" type="checkbox" value="call-types">
+                <label class="govuk-label govuk-checkboxes__label" for="call-types">
+                  Types of calls received – brief discussions
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="wellbeing" name="checklist" type="checkbox" value="wellbeing">
+                <label class="govuk-label govuk-checkboxes__label" for="wellbeing">
+                  How are operators and supervisors feeling?
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="further-support" name="checklist" type="checkbox" value="further-support">
+                <label class="govuk-label govuk-checkboxes__label" for="further-support">
+                  Seekibg further support
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="other-feedback" name="checklist" type="checkbox" value="other-feedback">
+                <label class="govuk-label govuk-checkboxes__label" for="other-feedback">
+                  Any other feedback
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="other-feedback" name="checklist" type="checkbox" value="other-feedback">
+                <label class="govuk-label govuk-checkboxes__label" for="other-feedback">
+                  Thank everyone
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="record-de-brief" name="checklist" type="checkbox" value="record-de-brief">
+                <label class="govuk-label govuk-checkboxes__label" for="record-de-brief">
+                  <a href="/supervisor/forms">Record information from de-brief</a>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <a onClick="window.location.reload();" class="govuk-button govuk-button--secondary">Start again</a>
+
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
