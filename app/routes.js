@@ -27,7 +27,7 @@ router.post('/refer/local-organisations', function (req, res) {
   }
 })
 
-// Branching in /refer/family-friends
+// Branching in /refer/local-organisations
 router.post('/refer/urgent', function (req, res) {
 
   let local_organisations = req.session.data['local_organisations']
@@ -63,7 +63,7 @@ router.post('/safeguard/signpost', function (req, res) {
   }
 })
 
-// Branching in /safeguard/immediate-risk
+// Branching in /safeguard/signposted
 router.post('/safeguard/already-supported', function (req, res) {
 
   let advice_needed = req.session.data['advice_needed']
@@ -75,7 +75,7 @@ router.post('/safeguard/already-supported', function (req, res) {
   }
 })
 
-// Branching in /safeguard/immediate-risk
+// Branching in /safeguard/already-supported
 router.post('/safeguard/yes-advice-needed', function (req, res) {
 
   let advice_needed = req.session.data['advice_needed']
